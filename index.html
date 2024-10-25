@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Local Data Storage</title>
+  <link rel="icon" type="image/x-icon" href="database.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Local Data Backup</h1>
+    <form id="dataForm">
+      <label for="number">Number:</label>
+      <select id="number" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select><br><br>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" readonly required><br><br>
+
+      <label for="deposit">Deposit:</label>
+      <div class="deposit-input">
+        <input type="number" id="deposit" required inputmode="numeric" placeholder="Enter deposit amount">
+        <button type="button" data-amount="2000">+2000</button>
+        <button type="button" data-amount="4000">+4000</button>
+        <button type="button" data-amount="6000">+6000</button>
+        <button type="button" data-amount="8000">+8000</button>
+        <button type="button" data-amount="10000">+10000</button>
+      </div><br><br>
+
+      <button type="submit">Add Data</button>
+    </form>
+
+    <div id="savedData">
+      <h2>History:</h2>
+      <ul id="dataList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
